@@ -25,7 +25,7 @@ const NavBar = () => {
 
       {/* Right side */}
 
-      <div className="inline-flex items-center gap-0.5">
+      <div className="inline-flex items-center gap-0.0">
         <button className="flex items-center gap-2  px-4 sm:px-6 py-1.5 sm:py-3 rounded-full transition-all duration-700">
           <img className="hover:scale-105 " src={assets.twitter_icon} alt="" />
         </button>
@@ -35,7 +35,7 @@ const NavBar = () => {
         </button>
 
         <button className="flex items-center gap-2 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full transition-all duration-700">
-          <img className=" hover:scale-105" src={assets.facebook_icon} alt="" />
+          <img className="hover:scale-105" src={assets.facebook_icon} alt="" />
         </button>
       </div>
     </div>
