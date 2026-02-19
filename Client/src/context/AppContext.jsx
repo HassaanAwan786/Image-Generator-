@@ -5,7 +5,6 @@ export const AppContext = createContext();
 const AppContexProvider = (props) => {
   const [user, setUser] = useState(true); // Replace with real user state later
   const value = {
-    user,
     setUser,
   };
   return (

@@ -7,13 +7,13 @@ import NavBar from "./components/NavBar"; // ✅ FIX: import NavBar
 import Footer from "./components/Footer"; // ✅ FIX: import Footer
 const App = () => {
   return (
-    <div className=" px-4 sm:px-10 md:px-14 lg:px-28 min-h-screen bg-gradient-to-b from-teal-50 to-orange-5s0">
+    <div className=" px-4 sm:px-10 md:px-14 lg:px-28 min-h-screen bg-gradient-to-b from-teal-50 to-orange-50">
       <NavBar />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/result" element={<Result />} />
-        <Route path="/buy" element={<BuyCredit />} />
+        <Route path="/BuyCredit" element={<BuyCredit />} />
       </Routes>
       <Footer />
     </div>

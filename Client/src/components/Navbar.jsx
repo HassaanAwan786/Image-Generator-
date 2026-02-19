@@ -10,14 +10,13 @@ const NavBar = () => {
 
   return (
     <div className="flex items-center justify-between py-4">
+      {/*Main div which have logo and on right side divs on condition*/}
       {/* Logo or leftside */}
       <Link to="/">
         {/* If assets.logo is broken, replace with a placeholder */}
         <img src={assets.Backcap} alt="Logo" className="w-38 sm:w-42 lg:w-60" />
       </Link>
-
       {/* Right side */}
-
       <div>
         {user ? (
           <div className="flex items-center gap-2 sm:gap-5">
