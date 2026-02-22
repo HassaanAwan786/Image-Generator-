@@ -2,11 +2,14 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { assets } from "../assets/assets"; // make sure this file actually exists
 import { AppContext } from "../context/AppContext";
-import Buy from "../pages/Result";
+import Buy from "../pages/Result";  
+
 
 const NavBar = () => {
   const { user } = useContext(AppContext);
   const navigate = useNavigate();
+  const {setShowLogin} = useContext(AppContext);
+ 
 
   return (
     <div className="flex items-center justify-between py-4">
@@ -70,7 +73,7 @@ const NavBar = () => {
             <p onClick={() => navigate("/buy")} className="cursor-pointer">
               Pricing
             </p>
-            <button className="bg-zinc-800 text-white px-7 py-2 sm:px-10 text-sm rounded-full">
+            <button onClick={()=>{setShowLogin(true)}} className="bg-zinc-800 text-white px-7 py-2 sm:px-10 text-sm rounded-full">
               Login
             </button>
           </div>

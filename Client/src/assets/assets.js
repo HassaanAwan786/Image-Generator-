@@ -20,6 +20,7 @@ import credit_star from "./credit_star.svg";
 import profile_icon from "./profile_icon.png";
 import Backcaps from "./Backcaps.png";
 import Backcap from "./Backcap.png";
+import user_icon from "./user_icon.svg";
 export const assets = {
   logo,
   logo_icon,
@@ -38,6 +39,8 @@ export const assets = {
   profile_icon,
   Backcaps,
   Backcap,
+  user_icon,
+
 };
 
 export const stepsData = [
