@@ -3,6 +3,8 @@ import { assets } from "../assets/assets";
 import { useState } from "react";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
   const [State, setState] = useState("Login");
   const {setShowLogin} = useContext(AppContext);
@@ -14,7 +16,7 @@ const Login = () => {
     }
     
   },[])
-  return <div className="absolute top-0 left-0 right-0 bottom-0 z-10 backdrop-blur-sm bg-black/30 flex justify-center items-center">
+  return <div className="fixed top-0 left-0 right-0 bottom-0 z-10 backdrop-blur-sm bg-black/30 flex justify-center items-center">
     <form className="relative bg-white p-10 rounded-lg text-slate-500 "
     >
         <h1 className="text-center text-2xl text-neutral-700 font-medium ">{State}</h1>
@@ -37,7 +39,7 @@ const Login = () => {
         <p className="text-sm text-blue-600 my-4 cursor-pointer">Forgot Password?</p>
       
             <button className="bg-black flex items-center 
-      gap-2 px-10 py-2 rounded-full bg-black text-while-100 m-auto hover:scale-105 transition-all duration-500"
+      gap-2 px-10 py-2 rounded-full bg-black text-white m-auto hover:scale-105 transition-all duration-500"
       >{State=="Login"?"Login":"Sign Up"}</button>
        {State=="Login"?<p className="text-sm text-gray-600 mt-5 cursor-pointer text-center">Don't have an account? <span className="text-blue-600 cursor-pointer" onClick={()=>{setState("Sign Up")}}>Sign up</span></p>
          :<p className="text-sm text-gray-600 mt-5 cursor-pointer text-center">Already have an account? <span className="text-blue-600 cursor-pointer" onClick={()=>{setState("Login")}}>Login</span></p>}

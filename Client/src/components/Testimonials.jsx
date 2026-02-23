@@ -1,21 +1,29 @@
 import React from "react";
 import { assets, testimonialsData } from "../assets/assets";
-
+import {motion} from "framer-motion";
 const Testimonials = () => {
   return (
-    <div className="flex flex-col items-center justify-center my-20 py-12">
+    <motion.div 
+    initial={{opacity:0,y:20}}
+    transition={{duration:1}}
+    whileInView={{opacity:1,y:0}}
+    viewport={{once:true}}
+    className="flex flex-col items-center justify-center my-20 py-12">
       <h1 className="text-3xl sm:text-4xl font-semibold mb-2">
         Customer Testimonials
       </h1>
       <p className=" text-gray-50 mb-12">What our Users are saying</p>
-      <div className="flex flex-wrap gap-6">
+      <div 
+     
+      className="flex flex-wrap gap-6">
         {testimonialsData.map((testimonial, index) => (
           <div
+          
             key={index}
             className="bg-white p-12 rounded-lg shadow-md order w-80 m-auto cursor-pointer hover:scale-105 transition-all duration-300"
           >
             <div className="flex flex-col items-center">
-              <img
+              <motion.img
                 src={testimonial.image}
                 alt=""
                 className="rounded-full w-14 "
@@ -36,7 +44,7 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

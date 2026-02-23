@@ -6,7 +6,7 @@ const Buy = () => {
   const [Image,setImage] = useState(assets.sample_img_1)
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [loading,setLoading] = useState(false);
-  const {input,setInput} = useState(" ")
+  const [input, setInput] = useState("")
   const onSubmitHandler = async(e)=>{}
   return (
     <form onSubmit={onSubmitHandler} className="flex flex-col min-h-[90vh] justify-center items-center">
@@ -20,7 +20,7 @@ const Buy = () => {
     
   </div>
 {!isImageLoaded &&
-  <div className='flex w-full max-wxl bg-neutral-500 text-white text-sm p-05 mt-10 rounded-full'>
+  <div className='flex w-full max-w-xl bg-neutral-500 text-white text-sm p-05 mt-10 rounded-full'>
     {/* 
     comments for the logic used below
     javascript
@@ -116,7 +116,7 @@ type="text" placeholder="Describe what you want to generate" className= 'flex-1 
   }
   {isImageLoaded &&
   <div className="flex gap-2 flex-wrap justify-center text-white text-sm p-0.5 mt-10 rounded-full">
-    <p onClick={() => {setIsImageLoaded(false)}} className='bg -  trasparent border border-zinc-900 text-black px-8 py-3 rounded-full cursor-pointer hover:bg-zinc-900 hover:text-white transition-all duration-200'>Generate Another</p>
+    <p onClick={() => {setIsImageLoaded(false)}} className='bg-transparent border border-zinc-900 text-black px-8 py-3 rounded-full cursor-pointer hover:bg-zinc-900 hover:text-white transition-all duration-200'>Generate Another</p>
     <a href={Image} download className='bg-zinc-900 px-10 py-3 rounded-full cursor-pointer'>Download</a>
 
   </div>
