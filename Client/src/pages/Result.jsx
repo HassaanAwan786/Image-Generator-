@@ -1,6 +1,6 @@
 import { assets } from "../assets/assets";
 import { useState } from "react";
-
+import {motion} from "framer-motion";
 
 const Buy = () => {
   const [Image,setImage] = useState(assets.sample_img_1)
@@ -109,9 +109,16 @@ You can react to changes instantly*/}
 onChange={(e)=>setInput(e.target.value)}
 value={input}
 type="text" placeholder="Describe what you want to generate" className= 'flex-1 bg-transparent outline-none ml-8 max-sm:w-20 placeholder-color '/>
-  <button type="submit" className="bg-black px-10 sm:px-16 py-3 rounded-full">
+  <motion.button 
+  initial={{opacity:0,y:20}}
+  animate={{opacity:1,y:0}}
+  transition={{duration:1}}
+  whileHover={{scale:1.05}}
+  whileTap={{scale:0.95}}
+  
+  type="submit" className="bg-black px-10 sm:px-16 py-3 rounded-full">
   Generate
-   </button>
+   </motion.button>
   </div> 
   }
   {isImageLoaded &&
