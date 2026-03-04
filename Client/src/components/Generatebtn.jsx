@@ -30,6 +30,8 @@ const Generatebtn = () => {
       <motion.button onClick={()=>{onClickHandler()}}
         className="sm:text-lg text-white bg-black inline-flex items-center 
       gap-2 px-12 py-3 rounded-full text-while-100 m-auto hover:scale-105 transition-all duration-500"
+      whileHover={{scale:1.05}}
+      whileTap={{scale:0.95}}
       >
         Generate Images
         <img src={assets.star_group} alt="" className="h-6" />
