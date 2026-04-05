@@ -5,9 +5,9 @@ import { AppContext } from "../context/AppContext";
 import Buy from "../pages/Result";
 
 const NavBar = () => {
-  const { user } = useContext(AppContext);
+  const { user, setShowLogin, logout, credit } = useContext(AppContext);
+
   const navigate = useNavigate();
-  const { setShowLogin } = useContext(AppContext);
 
   return (
     <div className="flex items-center justify-between py-4">
@@ -27,10 +27,10 @@ const NavBar = () => {
                 onClick={() => navigate("/buy")}
                 className="text-xs sm:text-sm font-medium text-gray-600"
               >
-                Credit Left: 50
+                Credit Left: {credit}
               </p>
             </button>
-            <p className="text-gray-600 max-sm:hidden pl-4">Hi,Hassaan</p>
+            <p className="text-gray-600 max-sm:hidden pl-4">Hi,{user.name}</p>
             <div className="relative group">
               <img
                 className="w-10  drop shadow rounded-full"
@@ -57,6 +57,7 @@ const NavBar = () => {
                     Profile Setting
                   </li>
                   <li
+                    onClick={logout}
                     className="py-1 px-2 cursor-pointer pr-10 hover:scale-105 transition-all duration-700"
                     style={{ backgroundColor: "rgba(213, 240, 239, 0.9)" }}
                   >
